@@ -1,0 +1,10 @@
+<% if @RSP == "가위" || @RSP == "바위" || @RSP == "보"%>
+  당신이 낸거 <%= @RSP %>
+  컴퓨터가 낸거 <%= @PC_RSP%>
+  <img src="<%= @img_RSP[@PC_RSP]%>">
+  
+
+  <%else%>
+  <h1>"똑바로 써 이때끼얌"</h1>
+  <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCHWLdv-0O2r-2T16InP2Jp2iIt440aM0tK-PdLDo4nz3FK1_6">
+  <%end%>
