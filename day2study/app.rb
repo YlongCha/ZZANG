@@ -7,7 +7,6 @@ require "uri"
 get "/" do
   erb :main
 end
-
 get "/car" do
   @carname = params[:carname]
   erb :car
