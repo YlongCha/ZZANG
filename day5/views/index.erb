@@ -1,0 +1,19 @@
+<!Doctype html>
+<html>
+  <head>
+    <meta charset = "utf-8" />
+    <title>블로그에 온걸 환영해</title>
+  </head>
+  <body>
+    <h2>영롱 블로그</h2>
+    <a href = "/new">글쓰러가기</a>
+    <hr />
+    <% @post.each do |p| %>
+    <p><%= p.id %></p>
+    <p><%= p.title %></p>
+    <p><%= p.content %> </p>
+    <p><%= p.created_at %> </p>
+    <hr />ss
+    <%end%>
+  </body>
+</html>
