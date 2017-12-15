@@ -33,3 +33,25 @@ get "/create" do
   Post.create(:title => @title, :content =>@content)
   redirect "/"
 end
+
+get "/posts/:id" do
+  @post = Post.get(params[:id])
+  erb :posts
+end
+get "/destroy/:id" do
+  @post = Post.get(params[:id])
+  @post.destroy
+  redirect "/"
+end
+
+get "/edit/:id" do
+  @post = Post.get(params[:id])
+  erb :edit
+end
+
+get "/update/:id" do
+  @post = Post.get(params[:id])
+  @post.update(:title => params[:title],
+  :content => params[:content])
+  redirect "/"
+end
