@@ -1,0 +1,8 @@
+
+<h2>가위바위보하기</h2>
+<form action="/update/<%=@post.id%>">
+  <p>제목 : <input type = "text" name = "title" value = "<%=@post.title%>" /></p>
+  <p>내용 : <textarea name = "content"><%=@post.content%></textarea></p>
+<input type = "submit" value = "확인" />
+
+</form>
