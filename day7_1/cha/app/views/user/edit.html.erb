@@ -1,0 +1,10 @@
+<form action = "/update/<%=@post.id%>">
+  <div class="form-group">
+  <label for="exampleFormControlTextarea1">제목</label>
+  <textarea class="form-control" name = "title" rows="1"><%= @post.title%></textarea>
+  <label for="exampleFormControlTextarea1">내용</label>
+  <textarea class="form-control" name = "content" rows="3"><%= @post.content%></textarea>
+  </div>
+  <input type = "submit" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" value = "확인" />
+  <a href="/" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">취소</a>
+</form>

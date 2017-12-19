@@ -1,0 +1,9 @@
+<h1>글 목록 확인 <a class="btn btn-primary" href="/" role="button">돌아가기</a></h1>
+
+<%@posts.each do |t|%>
+<%= t.title %>
+<%= t.content %>
+<a href="/edit/<%=t.id%>" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">수정</a>
+<a href="/destroy/<%=t.id%>" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">삭제</a>
+<hr />
+<%end%>
