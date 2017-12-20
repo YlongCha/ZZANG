@@ -1,0 +1,10 @@
+<% @posts.each do |t| %>
+<%= t.title %>
+<%= t.content %>
+<%= t.username %>
+<%= t.created_at %>
+<a role = "button"  class="btn btn-info" href = "home/edit/<%=t.id%>">수정</a>
+<a role = "button" class="btn btn-info" href = "/destroy/<%=t.id%>">삭제</a>
+<br />
+<% end %>
+<a role = "button" class="btn btn-info" href = "/">홈</a>
