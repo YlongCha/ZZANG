@@ -1,0 +1,2 @@
+module ChaHelper
+end
