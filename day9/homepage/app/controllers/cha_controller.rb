@@ -6,6 +6,9 @@ class ChaController < ApplicationController
   end
 
   def create
+    Post.create(:title => params[:title],
+    :content => params[:content])
+    redirect_to "/"
   end
 
   def posts

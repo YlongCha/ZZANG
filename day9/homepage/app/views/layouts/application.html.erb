@@ -2,22 +2,44 @@
 <html>
 <head>
   <title>Homepage</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application'%>
   <%= csrf_meta_tags %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
 <body>
-  <%= render "layouts/flash"%>
-  <div class = "text-right">
-    <% unless current_user.nil? %>
-      <%= current_user.name %>
-      <a href="/user/logout">로그아웃</a><br />
-    <% else %>
-      <a href="/user/new">회원가입하기</a><br />
-      <a href="/user/login">로그인하기</a><br />
-    <% end %>
+  <div class="btn-group">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-3x fa-bars"></i>
+    </button>
   </div>
+    <%= render "layouts/flash"%>
+    <div class = "text-right">
+      <% unless current_user.nil? %>
+        <%= current_user.name %>
+        <a href="/user/logout">로그아웃</a><br />
+      <% else %>
+        <a href="/user/new">회원가입하기</a><br />
+        <a href="/user/login">로그인하기</a><br />
+      <% end %>
+    </div>
+</div>
+
+
+  <div class="pos-f-t">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="white p-4">
+      <span class="fa-layers fa-5x  fa-fw" >
+        <a href="/cha/new"><i class="far fa-clipboard" ></i>
+        <span class="fa-layers-text fa-inverse" data-fa-transform="shrink-11.5 rotate--30" style="font-weight:900;color:black">NEW</span></a>
+      </span>
+      <span class="fa-layers fa-5x  fa-fw" >
+        <a href="/cha/new"><i class="far fa-clipboard" ></i>
+        <span class="fa-layers-text fa-inverse" data-fa-transform="shrink-11.5 rotate--30" style="font-weight:900;color:black">LIST</span></a>
+      </span>
+    </div>
+  </div>
+
   <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>

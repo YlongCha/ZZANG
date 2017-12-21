@@ -1,2 +1,14 @@
-<h1>Cha#new</h1>
-<p>Find me in app/views/cha/new.html.erb</p>
+<div class = "container">
+  <form action="/cha/create">
+    <div class="input-group input-group-lg">
+      <span class="input-group-addon" id="sizing-addon1">제목</span>
+      <input type="text" class="form-control" placeholder="제목을 쓰시오" name = "title">
+    </div>
+     <div class="input-group input-group-lg mt-3">
+       <span class="input-group-addon" id="sizing-addon1">내용</span>
+       <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name = "content" placeholder="내용을 쓰시오"></textarea>
+     </div>
+     <button type="submit" class="btn btn-primary btn-lg btn-block mt-3">확인</button>
+
+  </form>
+</div>
